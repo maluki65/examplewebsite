@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+
+::-webkit-scrollbar-thumb {
+    width: 100%;
+    background-color: cadetblue;
+    border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #111222;
+}
+
+/**End of Utilities**/
+/*Start of scroll bar*/
+::-webkit-scrollbar {
+    width: 11px;
+    background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 100%;
+    background: #1b1b1b;
+    border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: blue;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fff(37, 37, 36);
+}
+/* Start of nav section*/
+nav {
+    background: #1b1b1b;
+    width: 100%;
+    z-index: 10000;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.logo {
+    float: left;
+    color: #fff;
+    font-size: 2em;
+    font-weight: 700;
+    padding-left: 70px;
+    padding-top: 10px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50%;
+}
+
+nav:after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+nav ul {
+    float: right;
+    list-style: none;
+    margin-right: 40px;
+    position: relative;
+}
+
+nav ul li {
+    float: none;
+    display: inline-block;
+    background: #1b1b1b;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #fff;
+    backdrop-filter: blur(10px);
+    text-decoration: none;
+    line-height: 70px;
+    font-size: 18px;
+    padding: 8px 15px;
+}
+
+nav ul li a:hover {
+    border-radius: 5px;
+    color: cyan;
+    box-shadow: 0 0 5px #33ffff,
+        0 0 5px #66ffff;
+}
+
+nav ul ul {
+    position: absolute;
+    top: 70px;
+    opacity: 0;
+    visibility: hidden;
+    transition: top .3s;
+}
+
+nav ul li:hover>ul {
+    opacity: 1;
+    top: 50px;
+    visibility: visible;
+}
+
+nav ul ul li {
+    position: relative;
+    margin: 0px;
+    width: 150px;
+    float: none;
+    display: list-item;
+    border-bottom: aqua;
+}
+
+nav ul ul li a:hover {
+    color: rgb(63, 177, 177);
+    box-shadow: none;
+}
+
+nav ul ul li a {
+    line-height: 60px;
+}
+
+nav ul ul li {
+    border-bottom: 0px;
+}
+
+.show,
+.openIcon {
+    display: none;
+}
+
+#btn,
+#btn-2,
+#btn-1 {
+    display: none;
+}
+
+/* End of nav section*/
+
+/* Start of About Us section*/
+.sec {
+    padding: 100px;
+    background-color: rgb(202, 202, 92);
+    margin-bottom: 0px;
+}
+
+.row {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.row .col {
+    position: relative;
+    width: 50%;
+}
+
+.sec .row .col h1 {
+    color: #000;
+    font-size: 2.5em;
+    font-weight: 300;
+    margin-top: 15px;
+}
+
+.sec .row .col h1::after {
+    position: absolute;
+    content: '';
+    height: 4px;
+    width: 50%;
+    left: 50%;
+    bottom: -5px;
+    background: linear-gradient(to right, rgb(9, 127, 127), rgb(15, 70, 94))
+}
+
+#r {
+    margin-top: 20px;
+}
+
+#co {
+    margin-left: 5px;
+    padding: 27px;
+}
+
+.row .col .vidBx {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.row .col .vidBx video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.row .col .imgBox {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.row .col .imgBox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.row dl {
+    float: right;
+}
+
+.row .fork {
+    float: left;
+}
+
+/* End of About Us section*/
+
+/*Start of Footer*/
+footer {
+    position: relative;
+    width: 100%;
+    margin-top: 15px;
+    height: auto;
+    padding: 50px 100px;
+    background: #1b1b1b;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer .foot {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer .foot .min {
+    margin-right: 30px;
+}
+
+footer .foot .min.aboutUs {
+    width: 40%;
+}
+
+footer .foot h2 {
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+footer .foot h2:before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #33ffff;
+}
+
+footer p {
+    color: #999;
+}
+
+footer p:hover {
+    color: #fff;
+}
+
+.media-i {
+    margin-top: 20px;
+    display: flex;
+}
+
+.media-i li {
+    list-style: none;
+}
+
+.media-i li a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #202834;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.media-i li a:hover {
+    background: #cde0e6;
+    color: #000;
+}
+
+.media-i li a .fa {
+    color: #fff;
+    font-size: 2px
+}
+
+.quickLinks {
+    position: relative;
+    width: 25%;
+}
+
+.quickLinks ol li {
+    list-style: none;
+}
+
+.quickLinks ol li a {
+    color: #999;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.quickLinks ol li a:hover {
+    color: #fff;
+}
+
+.contactWays {
+    width: calc(35% - 60px);
+    margin-right: 0 !important;
+}
+
+.contactWays .info {
+    position: relative;
+}
+
+.contactWays .info li {
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.contactWays .info li span {
+    color: #999;
+}
+
+.contactWays .info li span:nth-child(1) {
+    color: #fff;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.contactWays .info li a {
+    color: #999;
+    text-decoration: none;
+}
+
+.contactWays .info li a:hover {
+    color: #fff;
+}
+
+.contactWays .info li span:hover {
+    color: #fff;
+}
+
+.copyright {
+    width: 100%;
+    background: #1f1a1a;
+    padding: 8px 100px;
+    text-align: center;
+    color: #999;
+}
+
+/*End of Footer*/
+
+@media(max-width:1040px) {
+    nav ul {
+        margin-right: 0px;
+        float: left;
+    }
+
+    nav .logo {
+        padding-left: 30px;
+        width: 100%;
+    }
+
+    .openIcon {
+        display: block;
+        color: #fff;
+        position: absolute;
+        right: 40px;
+        line-height: 70px;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    nav ul li,
+    nav ul ul li {
+        display: block;
+        width: 100%;
+    }
+
+    nav ul ul {
+        top: 70px;
+        position: static;
+        border-top: none;
+        float: none;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    nav ul ul a {
+        padding-left: 40px;
+    }
+
+    .show {
+        display: block;
+        color: #fff;
+        font-size: 18px;
+        padding: 0 20px;
+        line-height: 70px;
+        cursor: pointer;
+    }
+
+    .show:hover {
+        color: aqua;
+    }
+
+    nav ul li a:hover {
+        box-shadow: none;
+    }
+
+    .show:hover {
+        color: #66ffff;
+    }
+
+    .show+a,
+    ul {
+        display: none;
+    }
+
+    #btn:checked+ul {
+        display: block;
+    }
+
+    #btn-1:checked+ul {
+        display: block;
+    }
+
+    #btn-2:checked+ul {
+        display: block;
+    }
+
+    .sec {
+        padding: 10px;
+        margin-top: 20px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .row .col {
+        position: relative;
+        width: 100%;
+    }
+
+    .sec .row .col h1 {
+        font-weight: 300;
+        margin-top: 40px;
+    }
+
+    .row .col .vidBx {
+        height: 350px;
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+
+    .row .col .imgBox {
+        height: 350px;
+        margin-top: 20px;
+    }
+
+    .row .fork {
+        float: right;
+    }
+
+    footer {
+        padding: 40px;
+    }
+
+    footer .foot {
+        flex-direction: column;
+    }
+
+    footer .foot .min {
+        margin-right: 0px;
+        margin-bottom: 40px;
+    }
+
+    .quickLinks,
+    .contactWays {
+        width: 100%;
+    }
+
+    #about {
+        width: 100%;
+    }
+
+    .copyright {
+        padding: 8px 40px;
+    }
+}
+
+@media(max-width:576px) {
+    .toggle-btn {
+        right: 0;
+    }
+
+    .logo {
+        padding-left: 1px;
+        font-size: 1.2em;
+    }
+}
